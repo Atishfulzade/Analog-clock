@@ -14,13 +14,13 @@
 .container {
   height: 100vh;
   width: 100vw;
-
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 50px;
+  transition: 0.3s;
 }
 .dark {
   background-color: black;
@@ -32,7 +32,6 @@
   justify-content: center;
   height: 400px;
   width: 400px;
-
   box-shadow: inset 0px 12px 20px #6d6969, 0px 7px 10px 0px #000000;
   border-radius: 50%;
   position: relative;
@@ -82,13 +81,11 @@
 .hand.minute {
   height: 120px;
   width: 5px;
-
   background-color: var(--blackColor);
 }
 .hand.hour {
   height: 100px;
   width: 8px;
-
   background-color: var(--blackColor);
 }
 .board {
@@ -107,7 +104,6 @@
   height: 50px;
   width: 25px;
   background-color: var(--whiteColor);
-
   border-radius: 2px;
   display: flex;
   justify-content: center;
@@ -138,4 +134,19 @@
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 100, "opsz" 84;
+}
+@media (max-width: 576px) {
+  .clock {
+    height: 300px;
+    width: 300px;
+  }
+  .hand.minute {
+    height: 90px;
+  }
+  .hand.hour {
+    height: 70px;
+  }
+  .hand.second {
+    height: 100px;
+  }
 }
